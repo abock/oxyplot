@@ -25,7 +25,7 @@ build_script:
   - msbuild Source/OxyPlot.AppVeyor.sln "/property:Platform=Any CPU" /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
  
 after_build:
-  - gitlink c:\projects\oxyplot -u https://github.com/oxyplot/oxyplot -f Source/OxyPlot.AppVeyor.sln -ignore OxyPlot.Windows10,OxyPlot.MonoTouch,OxyPlot.Xamarin.Android,OxyPlot.Xamarin.iOS,OxyPlot.Xamarin.Forms.Platform.Android,OxyPlot.Xamarin.Forms.Platform.iOS,OxyPlot.Xamarin.Forms.Platform.iOS.Classic
+  - gitlink c:\projects\oxyplot -u https://github.com/oxyplot/oxyplot -f Source/OxyPlot.AppVeyor.sln -ignore OxyPlot.Windows10,OxyPlot.MonoTouch,OxyPlot.Xamarin.Android,OxyPlot.Xamarin.iOS,OxyPlot.Xamarin.Forms.Platform.Android,OxyPlot.Xamarin.Forms.Platform.iOS,OxyPlot.Xamarin.Forms.Platform.iOS.Classic,Oxyplot.Xamarin.Workbooks
   - NuGet pack Source\OxyPlot\OxyPlot.Core.nuspec -version "%GitVersion_NuGetVersion%"
   - NuGet pack Source\OxyPlot.Wpf\OxyPlot.Wpf.nuspec -version "%GitVersion_NuGetVersion%"
   - NuGet pack Source\OxyPlot.Windows\OxyPlot.Windows.nuspec -version "%GitVersion_NuGetVersion%"
@@ -38,6 +38,7 @@ after_build:
   - NuGet pack Source\OxyPlot.GtkSharp\OxyPlot.GtkSharp3.nuspec -version "%GitVersion_NuGetVersion%"
   - NuGet pack Source\OxyPlot.SharpDX.Wpf\OxyPlot.SharpDX.Wpf.nuspec -version "%GitVersion_NuGetVersion%"
   - NuGet pack Source\OxyPlot.Avalonia\OxyPlot.Avalonia.nuspec -version "%GitVersion_NuGetVersion%"
+  - NuGet pack Source\OxyPlot.Xamarin.Workbooks\OxyPlot.Xamarin.Workbooks.nuspec -versioni "%GitVersion_NuGetVersion%"
   - NuGet pack Source\Examples\ExampleLibrary\OxyPlot.ExampleLibrary.nuspec -version "%GitVersion_NuGetVersion%"
 
 artifacts:

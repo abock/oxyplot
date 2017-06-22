@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>OxyPlot.Xamarin.Workbooks</id>
+    <title>OxyPlot Xamarin Workbooks Integration</title>
+    <version>$version$</version>
+    <authors>Oystein Bjorke</authors>
+    <description>OxyPlot is a plotting library for .NET. This package provides rendering support for plot models in Xamarin Workbooks.</description>
+    <releaseNotes></releaseNotes>
+    <licenseUrl>https://raw.githubusercontent.com/oxyplot/oxyplot/master/LICENSE</licenseUrl>
+    <projectUrl>http://oxyplot.org/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/oxyplot/oxyplot/develop/Icons/OxyPlot_128.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>plotting plot charting chart</tags>
+    <dependencies>
+      <dependency id="OxyPlot.Core" version="[$version$]"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\Output\PCL\OxyPlot.Xamarin.Workbooks.???" target="xamarin.interactive" />
+
+    <file src="..\..\LICENSE" />
+    <file src="..\..\AUTHORS" />
+    <file src="..\..\CONTRIBUTORS" />
+    <file src="..\..\README.md" />
+    <file src="..\..\CHANGELOG.md" />
+  </files>
+</package>
